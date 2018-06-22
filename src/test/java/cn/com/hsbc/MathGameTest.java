@@ -3,6 +3,9 @@ package cn.com.hsbc;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by alex on 6/22/18.
  */
@@ -16,6 +19,13 @@ public class MathGameTest {
         Assert.assertEquals("Buzz",mathGame.getResultByNumber(5));
         Assert.assertEquals("Fizz",mathGame.getResultByNumber(6));
         Assert.assertEquals("FizzBuzz",mathGame.getResultByNumber(15));
+    }
+
+    @Test
+    public void testGetHundredResult() {
+        MathGame mathGame = new MathGame();
+        List<String> tmpList = mathGame.getHundredResults();
+        Assert.assertEquals(100, tmpList.size());
     }
 
 }
